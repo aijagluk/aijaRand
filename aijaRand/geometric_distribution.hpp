@@ -5,8 +5,10 @@ class Distribution;
 
 class GeometricDistribution : public Distribution {
 public:
-  GeometricDistribution();
+  GeometricDistribution();    
   explicit GeometricDistribution(double p) : _p(p) {}
+
+  virtual ~GeometricDistribution() {}
 
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);

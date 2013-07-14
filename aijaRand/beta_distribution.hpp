@@ -8,6 +8,8 @@ public:
   BetaDistribution();
   BetaDistribution(unsigned int alpha, unsigned int beta) : _alpha(alpha), _beta(beta) {}
 
+  virtual ~BetaDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

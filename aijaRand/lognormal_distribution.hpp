@@ -8,6 +8,9 @@ public:
   LognormalDistribution();
   LognormalDistribution(double expected_value, double variance) : _expected_value(expected_value), _variance(variance) {}
 
+  virtual ~LognormalDistribution() {}
+
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

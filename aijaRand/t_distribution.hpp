@@ -8,6 +8,8 @@ public:
   TDistribution();
   explicit TDistribution(unsigned int k) : _k(k) {}
 
+  virtual ~TDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

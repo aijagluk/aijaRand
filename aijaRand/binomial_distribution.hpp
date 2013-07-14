@@ -8,6 +8,8 @@ public:
   BinomialDistribution();
   BinomialDistribution(unsigned int n, double p) : _n(n), _p(p) {}
 
+  virtual ~BinomialDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

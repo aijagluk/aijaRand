@@ -8,6 +8,8 @@ public:
   TriangularDistribution();
   TriangularDistribution(double a, double b, double m) : _a(a), _b(b), _m(m) {}
 
+  virtual ~TriangularDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

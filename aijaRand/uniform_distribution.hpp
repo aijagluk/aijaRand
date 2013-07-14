@@ -8,6 +8,8 @@ public:
   UniformDistribution();
   UniformDistribution(double a, double b);
 
+  virtual ~UniformDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

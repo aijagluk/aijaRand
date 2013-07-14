@@ -8,6 +8,8 @@ public:
   ExponentialDistribution();
   explicit ExponentialDistribution(double beta) : _beta(beta) {}
 
+  virtual ~ExponentialDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

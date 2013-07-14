@@ -8,6 +8,8 @@ public:
   ErlangDistribution();
   ErlangDistribution(unsigned int k, double beta) : _k(k), _beta(beta) {}
 
+  virtual ~ErlangDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

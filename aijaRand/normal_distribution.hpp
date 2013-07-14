@@ -8,6 +8,8 @@ public:
   NormalDistribution();
   NormalDistribution(double expected_value, double variance) : _expected_value(expected_value), _variance(variance) {}
 
+  virtual ~NormalDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

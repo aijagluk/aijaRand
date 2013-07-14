@@ -8,6 +8,8 @@ public:
   ChiSquareDistribution();
   explicit ChiSquareDistribution(unsigned int k) : _k(k) {}
 
+  virtual ~ChiSquareDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

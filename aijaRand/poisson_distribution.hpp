@@ -8,6 +8,8 @@ public:
   PoissonDistribution();
   explicit PoissonDistribution(double lambda) : _lambda(lambda) {}
 
+  virtual ~PoissonDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

@@ -8,6 +8,8 @@ public:
   CauchyDistribution();
   CauchyDistribution(double alpha, double beta) : _alpha(alpha), _beta(beta) {}
 
+  virtual ~CauchyDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 

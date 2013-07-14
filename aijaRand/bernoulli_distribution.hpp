@@ -6,10 +6,14 @@ class Distribution;
 class BernoulliDistribution : public Distribution {
 public:
   BernoulliDistribution();
-  explicit BernoulliDistribution(double p) : _p(p) {}
+  explicit BernoulliDistribution(double p)
+    : _p(p)
+  {}
+
+  ~BernoulliDistribution() {}
 
   virtual double GetRandNum();
-  virtual std::vector<double>* GetRandNums(unsigned int count);
+  virtual std::vector<double>* GetRandNums(unsigned int count); 
 
 private:
   double _p;

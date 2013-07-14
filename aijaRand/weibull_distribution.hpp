@@ -8,6 +8,8 @@ public:
   WeibullDistribution();
   WeibullDistribution(double alpha, double beta) : _alpha(alpha), _beta(beta) {}
 
+  virtual ~WeibullDistribution() {}
+
   virtual double GetRandNum();
   virtual std::vector<double>* GetRandNums(unsigned int count);
 
