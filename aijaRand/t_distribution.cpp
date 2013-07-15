@@ -20,6 +20,8 @@ double TDistribution::GetRandNum() {
 std::vector<double>* TDistribution::GetRandNums(unsigned int count) {
 
   std::vector<double>* the_vector = new std::vector<double>();
+  the_vector->reserve(count);
+
   NormalDistribution* nd = new NormalDistribution(0.0, 1.0);
   ChiSquareDistribution* chi_d = new ChiSquareDistribution(_k);
   double z(0.0);

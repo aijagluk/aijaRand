@@ -25,6 +25,8 @@ std::vector<double>* BetaDistribution::GetRandNums(unsigned int count) {
   }
 
   std::vector<double>* the_vector = new std::vector<double>();
+  the_vector->reserve(count);
+
   GammaDistribution* gd_1 = new GammaDistribution(_alpha, 1.0);
   GammaDistribution* gd_2 = new GammaDistribution(_beta, 1.0);
 

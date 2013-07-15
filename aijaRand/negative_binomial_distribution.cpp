@@ -29,6 +29,8 @@ std::vector<double>* NegativeBinomialDistribution::GetRandNums(unsigned int coun
 
   double total_y(0.0);
   std::vector<double>* the_vector = new std::vector<double>();
+  the_vector->reserve(count);
+
   GeometricDistribution* gd = new GeometricDistribution(_p);
 
   for (unsigned int n = 0; n < count; ++n) {

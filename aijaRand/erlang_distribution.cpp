@@ -21,6 +21,8 @@ double ErlangDistribution::GetRandNum() {
 std::vector<double>* ErlangDistribution::GetRandNums(unsigned int count) {
 
   std::vector<double>* the_vector = new std::vector<double>();
+  the_vector->reserve(count);
+
   ExponentialDistribution* ed = new ExponentialDistribution(_beta / static_cast<double>(_k));
 
   double total_y(0.0);

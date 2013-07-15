@@ -20,6 +20,8 @@ double FDistribution::GetRandNum() {
 std::vector<double>* FDistribution::GetRandNums(unsigned int count) {
 
   std::vector<double>* the_vector = new std::vector<double>();
+  the_vector->reserve(count);
+
   ChiSquareDistribution* chi_d_1 = new ChiSquareDistribution(_k_1);
   ChiSquareDistribution* chi_d_2 = new ChiSquareDistribution(_k_2);
 

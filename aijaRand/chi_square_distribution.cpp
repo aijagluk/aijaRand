@@ -22,6 +22,8 @@ double ChiSquareDistribution::GetRandNum() {
 std::vector<double>* ChiSquareDistribution::GetRandNums(unsigned int count) {
 
   std::vector<double>* the_vector = new std::vector<double>();
+  the_vector->reserve(count);
+
   NormalDistribution* nd = new NormalDistribution(0.0, 1.0);
   double total_z(0.0);
   double z(0.0);

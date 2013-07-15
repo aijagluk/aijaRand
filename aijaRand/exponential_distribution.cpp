@@ -24,6 +24,8 @@ std::vector<double>* ExponentialDistribution::GetRandNums(unsigned int count) {
   }
 
   std::vector<double>* the_vector = new std::vector<double>();
+  the_vector->reserve(count);
+
   UniformDistribution* ud = new UniformDistribution(0.0, 1.0);
 
   for (unsigned int i = 0; i < count; ++i) {

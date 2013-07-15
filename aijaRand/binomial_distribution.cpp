@@ -28,6 +28,8 @@ std::vector<double>* BinomialDistribution::GetRandNums(unsigned int count) {
   }
 
   std::vector<double>* the_vector = new std::vector<double>();
+  the_vector->reserve(count);
+
   BernoulliDistribution* bd = new BernoulliDistribution(_p);
   double total_y(0.0);
 

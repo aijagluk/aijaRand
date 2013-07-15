@@ -19,6 +19,8 @@ double NormalDistribution::GetRandNum() {
 std::vector<double>* NormalDistribution::GetRandNums(unsigned int count) {
 
   std::vector<double>* the_vector = new std::vector<double>();
+  the_vector->reserve(count);
+
   UniformDistribution* ud = new UniformDistribution(0.0, 1.0);
   double u_1;
   double u_2;

@@ -16,6 +16,8 @@ double LognormalDistribution::GetRandNum() {
 std::vector<double>* LognormalDistribution::GetRandNums(unsigned int count) {
 
   std::vector<double>* the_vector = new std::vector<double>();
+  the_vector->reserve(count);
+
   NormalDistribution* nd = new NormalDistribution(_expected_value, _variance);
 
   for (unsigned int i = 0; i < count; ++i) {

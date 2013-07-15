@@ -30,6 +30,8 @@ std::vector<double>* UniformDistribution::GetRandNums(unsigned int count) {
   }
 
   std::vector<double>* the_vector = new std::vector<double>();
+  the_vector->reserve(count);
+
   double tmp_value;
 
   for (unsigned int i = 0; i < count; ++i) {
